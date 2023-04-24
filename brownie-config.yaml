@@ -1,0 +1,46 @@
+dependencies:
+    - smartcontractkit/chainlink-brownie-contracts@0.4.0
+    - aave/protocol-v3@1.17.2
+compiler:
+    solc:
+        remappings:
+            - "@chainlink=smartcontractkit/chainlink-brownie-contracts@0.4.0"
+            - "@aave=aave/protocol-v3@1.17.2"
+
+
+networks:
+  default: development
+  development:
+   keyhash: "0x474e34a077df58807dbe9c96d3c009b23b3c6d0cce433e59bbf5b34f823bc56c"
+   fee: 250000000000000000
+   weth_token: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+   pool_addresses_provider: "0x2f39d218133AFaB8F2B819B1066c7E434Ad94E9e"
+  
+
+
+  mainnet-fork: 
+   weth_token: "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+   pool_addresses_provider: "0x2f39d218133AFaB8F2B819B1066c7E434Ad94E9e"
+
+
+   
+   
+   
+
+
+
+  sepolia:
+    vrf_coordinator: "0x8103B0A8A00be2DDC778e6e7eaa21791Cd364625"
+    eth_usd_price_feed: "0x694AA1769357215DE4FAC081bf1f309aDC325306"
+    link_token: "0x779877A7B0D9E8603169DdbD7836e478b4624789"
+    keyhash: "0x474e34a077df58807dbe9c96d3c009b23b3c6d0cce433e59bbf5b34f823bc56c"
+    fee: 5000000000000000
+    verify: True
+    weth_token: "0xf531B8F309Be94191af87605CfBf600D71C2cFe0"
+    pool_addresses_provider: '0x0496275d34753A48320CA58103d5220d394FF77F'
+
+
+wallets:
+ from_key: ${PRIVATE_KEY}
+
+dotenv: .env
